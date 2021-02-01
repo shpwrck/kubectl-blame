@@ -23,7 +23,7 @@ install:
 gz_releases=$(addsuffix .tar.gz, $(PLATFORM_LIST))
 
 $(gz_releases): %.tar.gz : %
-	tar czf $(NAME)-$(VERSION)-$@ LICENSE $(NAME)-$(VERSION)-$</
+	tar czf $(NAME)-$(VERSION)-$@ LICENSE $(NAME)-$(VERSION)-$</$(NAME)
    
 sha256_releases=$(addsuffix .tar.gz.sha256, $(PLATFORM_LIST))
 
